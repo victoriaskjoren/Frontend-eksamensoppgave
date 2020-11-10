@@ -1,0 +1,98 @@
+<!-- Dette er hovedsiden, her skal en bruker kunn velge å logge inn på en ekstisterende bruker eller logge 
+inn på en ekstisterende konto -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+          
+          <ul class="nav__links">
+            <li class="nav__item">
+              <a class="nav__link" href="index.html">Home</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="account.html">Your account</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="myMatches.html">My matches</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="aboutUs.html">What is Finder</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="help.html">Help</a>
+            </li>
+            
+          </ul>
+        </nav>
+  
+      </header>
+
+      <div class = "headerTitle">         
+        <h1>
+          
+          Opprett din gratis profil nå!
+        </h1>
+
+      </div>
+
+      <div class="registerForm">
+        <h3>Sign in:</h3>
+        
+        Full Name:
+                    <br/>
+                    <input type="text" id="user_name" value="" placeholder="Your name"/>
+                    <br/>
+                    <br/>
+        <p id="validationTextName" style="color: red; margin-top:  1px; margin-bottom: 1px;"></p>
+         Email: 
+                    <br/>
+                    <input type="text" id="email" value="" placeholder="Email"/>
+                    <br/>
+                    <br/>
+        <p id="validationTextEmail" style="color: red; margin-top:  1px; margin-bottom: 1px;"></p>
+        Password: 
+                    <br/>
+        <input type="password" id="password" value="" placeholder="Your name"/>
+                    <br/>
+                    <br/>
+        <p id="passworderror" style="color: red; margin-top:  1px; margin-bottom: 1px;"></p>
+        About Me: 
+                    <br/>
+                    <input type="text" id="About Me" value="" placeholder="Add bio"/>
+                    <br/>
+                    <br/>
+              
+        <button type="submit" onclick="validateContactInformation()" style="cursor: pointer;">Sign up</button>
+      </div>
+        
+
+        <div class= "loginForm">
+            <h3>Already an user? Login here:</h3>
+            Email: 
+                        <br/>
+                        <input type="text" id="Email" value="" placeholder="Email address"/></input> 
+                        <br/>
+                        <br/>
+            Password: 
+                        <br/>
+                        <input type="password" id="password" value="" placeholder="Your name"/>
+                        <br/>
+                        <br/>
+            <p id="passworderror" style="color: red; margin-top:  1px; margin-bottom: 1px;"></p>
+            
+            <button type="submit" style="cursor: pointer;">Log in</button>
+        </div>
+
+      
+</body>
+
+<script src="script.js"></script>
+</html>

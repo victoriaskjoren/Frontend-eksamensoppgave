@@ -62,7 +62,7 @@ if (age <18 ){
     document.getElementById("passworderror").innerHTML = null;
 }
 if(form_valid){
-    window.location.href=('explore.html')
+    window.location.href=("../html/explore.html")
 }else{
     return false
 }
@@ -70,7 +70,7 @@ if(form_valid){
 function logInButton(){
     var form_valid = true
     if(form_valid){
-    window.location.href=('explore.html')
+    window.location.href=("../html/explore.html")
 }else{
     return false
 }

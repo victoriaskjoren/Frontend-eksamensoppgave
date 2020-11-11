@@ -1,22 +1,21 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 300;
-    color: #444;
+    color: rgb(70, 69, 69);
     line-height: 1.9;
-    background-color: rgb(255, 238, 238);
+    background-color: white;
   }
   /* NAVIGATION */
-  .nav {
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 9rem;
+    height: 100px;
     width: 100%;
-    padding: 0 6rem;
     z-index: 100;
     position: fixed;
-    background-color: #ffd0d0;
-    border: 1px solid #333;
+    background-color: rgb(255, 180, 180);
+    border: 1px solid rgb(250, 174, 174);
   }
   
   .nav__links {
@@ -26,7 +25,7 @@ body {
   }
   
   .nav__item {
-    margin-left: 4rem;
+    margin-left: 90px;
   }
   
   .nav__link:link,
@@ -54,36 +53,33 @@ body {
     color: #333;
   }
   
-  /* HEADER */
-  .header {
-    padding: 0 3rem;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-
+.navText{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 35px;
+    padding-left: 150px;
+    color: rgb(65, 65, 65);
+}
   
   .headerTitle {
-    flex: 1;
-    max-width: 115rem; 
-    display: grid;  
-    align-content: center;
-    justify-content: center;
-  }
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 120px;
+    color: rgb(224, 99, 99);
+}
 
-  
-  
-  h1 {
-    font-size: 5.5rem;
-    line-height: 1.35;
+  .titles{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 100px;
+
   }
   
   .registerForm{
     text-align: center;
     border: 1px solid #333;
     margin: 2% 35% 0% 35%;
+    
 }
 
   .loginForm {
@@ -93,6 +89,30 @@ body {
     
   }
 
- 
+  .interestsForm{
+    margin-left: 200px;
+    float: left;
+
+  }
   
+  .updateForm {
+    margin-left: 350px;
+    float: left;
+  }
+  
+
+  .bilde{
+    height: 130px;
+    width:145px;
+
+  }
+ 
+  .footer {
+    clear: both;
+    bottom:0;
+    width:100%;
+    height:60px;   
+    
+ }
+ 
  

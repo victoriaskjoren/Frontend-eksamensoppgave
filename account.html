@@ -11,8 +11,11 @@
         <nav class="nav">
           
             <ul class="nav__links">
+              
+                <img class = "bilde" src = photo.png>
+                
                 <li class="nav__item">
-                  <a class="nav__link" href="index.html">Home</a>
+                  <a class="nav__link" href="homeIfLoggedIn.html">Home</a>
                 </li>
                 <li class="nav__item">
                     <a class="nav__link" href="account.html">Your account</a>
@@ -21,24 +24,101 @@
                     <a class="nav__link" href="myMatches.html">My matches</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="aboutUs.html">What is Finder</a>
+                  <a class="nav__link" href="help.html">Help</a>
                 </li>
                 <li class="nav__item">
-                  <a class="nav__link" href="help.html">Help</a>
+                  <a class="nav__link" href="index.html">Log out</a>
                 </li>
             
           </ul>
         </nav>
+      </header>
   
-        <div class="headerTitle">
+        <div class="titles">
          
           <h1>
            Your account
           </h1>
-          <h4></h4>
+        </div>
+
+
+        <div class="updateForm">
+          <h2>Edit your user info:</h2>
+          
+          Full Name:
+                      <br/>
+                      <input type="text" id="user_name" value="" placeholder="Your name"/>
+                      <br/>
+                      <br/>
+          <p id="validationTextName" style="color: red; margin-top:  1px; margin-bottom: 1px;"></p>
+           Email: 
+                      <br/>
+                      <input type="text" id="email" value="" placeholder="Email"/>
+                      <br/>
+                      <br/>
+          <p id="validationTextEmail" style="color: red; margin-top:  1px; margin-bottom: 1px;"></p>
+          Age:
+                      <br>
+                      <input type="age" id= "age" value="" placeholder="Age"/>
+                      <br/>
+                      <br/>
+          
+          <p id="passworderror" style="color: red; margin-top:  1px; margin-bottom: 1px;"></p>
+          About me: 
+                      <br/>
+                      <input type="text" id="About Me" value="" placeholder="Edit bio"/>
+                      <br/>
+                      <br/>
+          <button type="submit" onclick="validateContactInformation()" style="cursor: pointer;">Update</button>
           
         </div>
-      </header>
+
+        
+
+        <div class= "interestsForm">
+          <h2>My interests:</h2>
+          
+          What´s your favourite animal?: 
+          <br/>
+          <select type="text" class="animals">
+            <option selected disabled>-Animals-</option>
+            <option value="animal1">Cat</option>
+            <option value="animal2">Dog</option>
+          <br/>
+          <br/>
+          Do you have any hobbies?: 
+          <br/>
+          <select type="text" class="hobbies">
+            <option selected disabled>-Hobbies-</option>
+            <option value="hobbie1">Sports</option>
+            <option value="hobbie2">Programming</option>
+          <br/>
+          <br/>
+          What´s your favourite meal?: 
+          <br/>
+          <select type="text" class="meals">
+            <option selected disabled>-Meals-</option>
+            <option value="meal1">Taco</option>
+            <option value="meal2">Pizza</option>
+          <br/>
+          <br/>
+          Where would you want to go on vacation?: 
+          <br/>
+          <select type="text" class="destinations">
+            <option selected disabled>-Destinations-</option>
+            <option value="destination1">Maldives</option>
+            <option value="destination2">Tokyo</option>
+          <br/>
+          
+          <button type="submit" onclick="validateContactInformation()" style="cursor: pointer;">Update</button>
+        </div>
+        
+
+        <footer>
+          <div class= "footer">
+            &copy; Victoria Skjøren 2020  
+           </div>
+       </footer>     
 
 </body>
 

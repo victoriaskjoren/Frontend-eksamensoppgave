@@ -10,11 +10,12 @@ document.getElementById("password").addEventListener("keyup" , function(){
 })
 
 function validateContactInformation() {
-// Punkt 1: Sæt JS variable, til de værdier der er indtastet i HTML formen 
+// Punkt 1: Sett JS variable, til de verdier som er inntastet i HTML filen
     
-    var name = document.getElementById('user_name').value;
+    var name = document.getElementById('userName').value;
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value
+    var age = document.getElementById('age').value
     var form_valid= true
 
 //Punkt 1: Valider username
@@ -45,6 +46,14 @@ var atPos = email.indexOf("@");
 if(password==null || password == "") {
     // Tilføjer en besked
     document.getElementById("passworderror").innerHTML = "You must fill in a password <br/>"
+
+// punkt 4 age
+
+if (age <18 ){
+    //legger til en beskjed
+    document.getElementById("validationTextAge").innerHTML = "You must be over the age of 18 <br/>"
+}
+
     
     // setter formen til false
     form_valid = false;
@@ -58,5 +67,14 @@ if(form_valid){
     return false
 }
 }
+function logInButton(){
+    var form_valid = true
+    if(form_valid){
+    window.location.href=('homeIfLoggedIn.html')
+}else{
+    return false
+}
+}
+
 
 

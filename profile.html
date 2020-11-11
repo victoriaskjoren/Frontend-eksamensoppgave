@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css" />
+    
 </head>
 <body>
+
+ 
+
+  </div>
     <header class="header">
         <nav class="nav">
           
             <ul class="nav__links">
               
-                <img class = "bilde" src = photo.png>
+                <img class = "logo" src = photo.png>
                 
                 <li class="nav__item">
-                  <a class="nav__link" href="homeIfLoggedIn.html">Home</a>
+                  <a class="nav__link" href="explore.html">Explore</a>
                 </li>
                 <li class="nav__item">
-                    <a class="nav__link" href="account.html">Your account</a>
+                    <a class="nav__link" href="profile.html">My profile</a>
                 </li>
                 <li class="nav__item">
                     <a class="nav__link" href="myMatches.html">My matches</a>
@@ -36,11 +41,19 @@
   
         <div class="titles">
          
-          <h1>
-           Your account
-          </h1>
+          <h2>
+           My profile
+          </h2>
         </div>
 
+       <div class ="profileOverview" >
+         <h2> My profile photo:</h2>
+
+        <img class = "profilePhoto" src = victoria.png>
+       </div>
+
+       
+       
 
         <div class="updateForm">
           <h2>Edit your user info:</h2>
@@ -70,10 +83,21 @@
                       <br/>
                       <br/>
           <button type="submit" onclick="validateContactInformation()" style="cursor: pointer;">Update</button>
-          
-        </div>
 
-        
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <div class = "deleteUser">
+            <label for= "delete">Do you want to delete your user?</label> 
+            <br/>
+            <input id= "delete" type="reset" value="Delete">
+    
+          </div>
+        </div>
+          
+
+       
 
         <div class= "interestsForm">
           <h2>My interests:</h2>
@@ -85,7 +109,7 @@
             <option value="animal1">Cat</option>
             <option value="animal2">Dog</option>
           <br/>
-          <br/>
+           <br/>
           Do you have any hobbies?: 
           <br/>
           <select type="text" class="hobbies">
@@ -109,9 +133,11 @@
             <option value="destination1">Maldives</option>
             <option value="destination2">Tokyo</option>
           <br/>
+           
           
-          <button type="submit" onclick="validateContactInformation()" style="cursor: pointer;">Update</button>
         </div>
+
+        
         
 
         <footer>
@@ -119,8 +145,8 @@
             &copy; Victoria Skjøren 2020  
            </div>
        </footer>     
-
+<script src="script.js"></script>
 </body>
 
-<script src="script.js"></script>
+
 </html>

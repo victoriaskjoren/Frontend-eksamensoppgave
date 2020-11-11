@@ -12,7 +12,7 @@ document.getElementById("password").addEventListener("keyup" , function(){
 function validateContactInformation() {
 // Punkt 1: Sett JS variable, til de verdier som er inntastet i HTML filen
     
-    var name = document.getElementById('userName').value;
+    var name = document.getElementById('fullName').value;
     var email = document.getElementById('email').value;
     var password = document.getElementById('password').value
     var age = document.getElementById('age').value
@@ -62,7 +62,7 @@ if (age <18 ){
     document.getElementById("passworderror").innerHTML = null;
 }
 if(form_valid){
-    window.location.href=('homeIfLoggedIn.html')
+    window.location.href=('explore.html')
 }else{
     return false
 }
@@ -70,11 +70,10 @@ if(form_valid){
 function logInButton(){
     var form_valid = true
     if(form_valid){
-    window.location.href=('homeIfLoggedIn.html')
+    window.location.href=('explore.html')
 }else{
     return false
 }
 }
-
 
 

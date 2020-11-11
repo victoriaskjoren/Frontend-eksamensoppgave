@@ -8,6 +8,7 @@ inn på en ekstisterende konto -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css" />
+    
 </head>
 <body>
   <header class="header">
@@ -15,7 +16,7 @@ inn på en ekstisterende konto -->
       
         <ul class="nav__links">
           
-            <img class = "bilde" src = photo.png>
+            <img class = "logo" src = photo.png>
             
             <li class="navText">
               <h3>Your new dating life starts here!</h3>
@@ -32,48 +33,47 @@ inn på en ekstisterende konto -->
         </a>
 
       </div>
+      <br/>
 
       <div class="registerForm">
         <h3>Sign up:</h3>
         
         Full Name:
                     <br/>
-                    <input type="text" id="userName" value="" placeholder="Your name"/>
+                    <input type="text" id="fullName" value="" placeholder="Your name"/>
                     <br/>
                     <br/>
-        <p id="validationTextName" style="color: red; margin-top:  1px; margin-bottom: 1px;"></p>
+        <p id="validationTextName" style="color: #000000; margin-top:  1px; margin-bottom: 1px;"></p>
          Email: 
                     <br/>
                     <input type="text" id="email" value="" placeholder="Email"/>
                     <br/>
                     <br/>
-        <p id="validationTextEmail" style="color: red; margin-top:  1px; margin-bottom: 1px;"></p>
+        <p id="validationTextEmail" style="color: #000000; margin-top:  1px; margin-bottom: 1px;"></p>
         Password: 
                     <br/>
         <input type="password" id="password" value="" placeholder="Password"/>
                     <br/>
                     <br/>
-        <p id="passworderror" style="color: red; margin-top:  1px; margin-bottom: 1px;"></p>            
+        <p id="passworderror" style="color: #000000; margin-top:  1px; margin-bottom: 1px;"></p>            
         Age:
                     <br>
         <input type="age" id= "age" value="" placeholder="Age"/>
                     <br/>
                     <br/>
                     
-        <p id= "validationTextAge" style= "color: red; margin-top:1px; margin-bottom: 1px;"></p>
+        <p id= "validationTextAge" style= "color: #000000; margin-top:1px; margin-bottom: 1px;"></p>
         
-        About Me: 
-                    <br/>
-                    <input type="text" id="About Me" value="" placeholder="Add bio"/>
-                    <br/>
-                    <br/>
+       
               
-        <button type="Sign up" onclick="validateContactInformation()" style="cursor: pointer;">Make new user</button>
+        <button type="Sign up" onclick="validateContactInformation()" style="cursor: pointer;">Sign up</button>
       </div>
         
 
         <div class= "loginForm">
-            <h3>Already an user? Login here:</h3>
+            <h3>Already a user?  </h3>
+            
+            <h4>Log in here:</h4>
             Email: 
                         <br/>
                         <input type="text" id="Email" value="" placeholder="Email address"/></input> 
@@ -97,6 +97,9 @@ inn på en ekstisterende konto -->
           </div>
       </footer>
 
+    <script src="script.js" ></script>
+    <script src="storage.js" ></script>
+    
     </body>
-<script src="script.js"></script>
+
 </html>

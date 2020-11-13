@@ -1,6 +1,7 @@
 document
   .getElementById("signUpPassword")
-  .addEventListener("keyup", function () {
+  .addEventListener("keyup", 
+  function () {
     let password = document.getElementById("signUpPassword").value;
     if (password.length <= 8) {
       document.getElementById("passworderror").innerHTML =
@@ -10,7 +11,7 @@ document
     }
   });
 
-function validateContactInformation() {
+function signInButton() {
   // Laver JS variabler og henter values fra html
 
   const name = document.getElementById("fullName").value;
@@ -94,18 +95,20 @@ function logInButton() {
       
     window.location.href = "../html/explore.html";
   } else {
-    document.getElementById("loginError").innerHTML = "Invalid <br/>";
+    document.getElementById("logInError").innerHTML = "Invalid <br/>";
   }
 }
 
 
 function deleteUser(){
     
-    console.log ("hei");
-        localStorage.removeItem("fullName");
-        localStorage.removeItem("email");
-        localStorage.removeItem("age");
-        localStorage.removeItem("password");
+        localStorage.removeItem("fullName")
+        localStorage.removeItem("email")
+        localStorage.removeItem("age")
+        localStorage.removeItem("password")
+
+        window.location.href = "../html/index.html";
+
 
     
 }

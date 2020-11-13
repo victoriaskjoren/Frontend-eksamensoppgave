@@ -24,8 +24,6 @@ function updateUser(){
 
 
 
-
-
 function logInButton() {
     const logInEmail = document.getElementById("logInEmail").value;
     const logInPassword = document.getElementById("logInPassword").value;

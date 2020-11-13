@@ -23,6 +23,7 @@ body {
     display: flex;
     align-items: center;
     list-style: none;
+    
   }
   
   .nav__item {
@@ -39,19 +40,12 @@ body {
     transition: all 0.3s;
   }
   
-  .nav__link--btn:link,
-  .nav__link--btn:visited {
-    padding: 0.8rem 2.5rem;
-    border-radius: 3rem;
-    background-color: var(--color-primary);
-    color: #222;
-  }
   
-  .nav__link--btn:hover,
-  .nav__link--btn:active {
-    color: inherit;
-    background-color: var(--color-primary-darker);
-    color: #333;
+  
+  .nav__link:hover {
+    background-color: rgb(233, 233, 233);
+    
+    
   }
   
 .navText{

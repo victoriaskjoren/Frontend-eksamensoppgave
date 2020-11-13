@@ -66,16 +66,31 @@ function signInButton() {
     document.getElementById("passworderror").innerHTML = null;
   }
 
-  if (form_valid) {
-    window.location.href = "../html/explore.html";
-  } else {
-    return false;
-  }
-
   localStorage.setItem("fullName", name);
   localStorage.setItem("email", email);
   localStorage.setItem("password", signUpPassword);
   localStorage.setItem("age", age);
+
+  const jwt = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJib2R5Ijoic3R1ZmYiLCJpYXQiOjE2MDUzMDI4OTZ9.m-fXhmPl65e-VrR9---1GLpuvO3goxPZUOvQTUUWdG0";
+  console.log("test")
+  fetch("http://localhost:3001/users", {
+    method: "POST",
+    body: JSON.stringify({
+      name: name,
+      email: email
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+      authorization: "Bearer " + jwt
+    }
+  }).then((response) => {
+    if (form_valid) {
+      window.location.href = "../html/explore.html";
+    } else {
+      return false;
+    }
+  })
+
 
   e.preventDefault();
 }
@@ -101,6 +116,8 @@ function logInButton() {
 
 
 function deleteUser(){
+
+  
     
         localStorage.removeItem("fullName")
         localStorage.removeItem("email")

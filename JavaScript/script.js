@@ -1,79 +1,111 @@
-//Punkt 3: Password
-document.getElementById("password").addEventListener("keyup" , function(){
-    var password= document.getElementById("password").value;
-    if (password.length <= 8){
-        document.getElementById("passworderror").innerHTML = "Password must contain more than 8 letters"
+document
+  .getElementById("signUpPassword")
+  .addEventListener("keyup", function () {
+    let password = document.getElementById("signUpPassword").value;
+    if (password.length <= 8) {
+      document.getElementById("passworderror").innerHTML =
+        "Password must contain more than 8 letters";
+    } else {
+      document.getElementById("passworderror").innerHTML = "";
     }
-    else {
-        document.getElementById("passworderror").innerHTML = ""
-    }
-})
+  });
 
 function validateContactInformation() {
-// Punkt 1: Sett JS variable, til de verdier som er inntastet i HTML filen
-    
-    var name = document.getElementById('fullName').value;
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value
-    var age = document.getElementById('age').value
-    var form_valid= true
+  // Laver JS variabler og henter values fra html
 
-//Punkt 1: Valider username
-    
-     if(name==null || name == "") {
-        // Tilføjer en besked
-        document.getElementById("validationTextName").innerHTML = "You must fill in your name <br/>"
-        
-        // setter formen til false
-        form_valid = false;
-    } else { 
-        // repeat
-        document.getElementById("validationTextName").innerHTML = null;
-   
-}
-//Punkt 2: Email
-var atPos = email.indexOf("@");
-    var dotPos = email.lastIndexOf(".");
-    
-    if(atPos < 1 || dotPos> email.length-2 || dotPos<atPos) {
-        document.getElementById("validationTextEmail").innerHTML = "Please put in a valid e-mail<br/>";
-        form_valid = false;
-    
-    } else {
-        document.getElementById("validationTextEmail").innerHTML = null;
-    }
-//also need to require a password
-if(password==null || password == "") {
-    // Tilføjer en besked
-    document.getElementById("passworderror").innerHTML = "You must fill in a password <br/>"
+  const name = document.getElementById("fullName").value;
+  const email = document.getElementById("email").value;
 
-// punkt 4 age
+  const signUpPassword = document.getElementById("signUpPassword").value;
+  const age = document.getElementById("age").value;
+  const form_valid = true;
 
-if (age <18 ){
-    //legger til en beskjed
-    document.getElementById("validationTextAge").innerHTML = "You must be over the age of 18 <br/>"
-}
+  //Punkt 1: Valider username
 
-    
+  if (name == null || name == "") {
+    // Legger til en feilmelding
+    document.getElementById("validationTextName").innerHTML =
+      "You must fill in your name <br/>";
+
     // setter formen til false
     form_valid = false;
-} else { 
+  } else {
     // repeat
+    document.getElementById("validationTextName").innerHTML = null;
+  }
+  //Punkt 2: Email
+  var atPos = email.indexOf("@");
+  var dotPos = email.lastIndexOf(".");
+
+  if (atPos < 1 || dotPos > email.length - 2 || dotPos < atPos) {
+    document.getElementById("validationTextEmail").innerHTML =
+      "Please put in a valid e-mail<br/>";
+    form_valid = false;
+  } else {
+    document.getElementById("validationTextEmail").innerHTML = null;
+  }
+  //also need to require a password
+
+  if (signUpPassword == null || signUpPassword == "") {
+    // Legger til en besked
+    document.getElementById("passworderror").innerHTML =
+      "You must fill in a password <br/>";
+
+    // punkt 4 age
+
+    if (age < 18 || age == "") {
+      //legger til en beskjed
+      document.getElementById("validationTextAge").innerHTML =
+        "You must be over the age of 18 <br/>";
+    }
+
+    // setter formen til false
+    form_valid = false;
+  } else {
     document.getElementById("passworderror").innerHTML = null;
-}
-if(form_valid){
-    window.location.href=("../html/explore.html")
-}else{
-    return false
-}
-}
-function logInButton(){
-    var form_valid = true
-    if(form_valid){
-    window.location.href=("../html/explore.html")
-}else{
-    return false
-}
+  }
+
+  if (form_valid) {
+    window.location.href = "../html/explore.html";
+  } else {
+    return false;
+  }
+
+  localStorage.setItem("fullName", name);
+  localStorage.setItem("email", email);
+  localStorage.setItem("password", signUpPassword);
+  localStorage.setItem("age", age);
+
+  e.preventDefault();
 }
 
 
+
+
+function logInButton() {
+
+    var savedEmail = localStorage.getItem("email");
+    var savedPassword = localStorage.getItem("password");
+
+  const logInEmail = document.getElementById("logInEmail").value;
+  const logInPassword = document.getElementById("logInPassword").value;
+
+  if (savedEmail == logInEmail && savedPassword == logInPassword) {
+      
+    window.location.href = "../html/explore.html";
+  } else {
+    document.getElementById("loginError").innerHTML = "Invalid <br/>";
+  }
+}
+
+
+function deleteUser(){
+    
+    console.log ("hei");
+        localStorage.removeItem("fullName");
+        localStorage.removeItem("email");
+        localStorage.removeItem("age");
+        localStorage.removeItem("password");
+
+    
+}

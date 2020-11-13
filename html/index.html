@@ -19,7 +19,7 @@ inn på en ekstisterende konto -->
             <img class = "logo" src = ../photos/photo.png>
             
             <li class="navText">
-              <h3>Your new dating life starts here!</h3>
+              <h3>Your new love life starts here!</h3>
             </li>
         
       </ul>
@@ -29,7 +29,7 @@ inn på en ekstisterende konto -->
       <div class = "headerTitle">         
         <a>
           
-          Opprett din gratis profil nå!
+          Make your free profile now!
         </a>
 
       </div>
@@ -40,33 +40,58 @@ inn på en ekstisterende konto -->
         
         Full Name:
                     <br/>
-                    <input type="text" id="fullName" value="" placeholder="Your name"/>
+                    <input 
+                    type="text" 
+                    id="fullName"  
+                    placeholder="Your name"/>
                     <br/>
+
                     <br/>
-        <p id="validationTextName" style="color: #000000; margin-top:  1px; margin-bottom: 1px;"></p>
+        <p 
+        class= error 
+        id="validationTextName" ></p>
          Email: 
                     <br/>
-                    <input type="text" id="email" value="" placeholder="Email"/>
+                    <input 
+                    type="text" 
+                    id="email" 
+                    value="" 
+                    placeholder="Email"/>
                     <br/>
                     <br/>
-        <p id="validationTextEmail" style="color: #000000; margin-top:  1px; margin-bottom: 1px;"></p>
+        <p 
+        class= error
+        id="validationTextEmail" ></p>
         Password: 
                     <br/>
-        <input type="password" id="password" value="" placeholder="Password"/>
+        <input 
+        type="password" 
+        id="signUpPassword"  
+        placeholder="Password"/>
                     <br/>
                     <br/>
-        <p id="passworderror" style="color: #000000; margin-top:  1px; margin-bottom: 1px;"></p>            
+        <p 
+        class=error
+        id="passworderror" ></p>            
         Age:
                     <br>
-        <input type="age" id= "age" value="" placeholder="Age"/>
+        <input 
+        type="age" 
+        id= "age"  
+        placeholder="Age"/>
                     <br/>
                     <br/>
                     
-        <p id= "validationTextAge" style= "color: #000000; margin-top:1px; margin-bottom: 1px;"></p>
+        <p 
+        class= error
+        id= "validationTextAge" ></p>
         
        
               
-        <button type="Sign up" onclick="validateContactInformation()" style="cursor: pointer;">Sign up</button>
+        <button 
+        type="Sign up" 
+        onclick="validateContactInformation()" 
+        style="cursor: pointer;">Sign up</button>
       </div>
         
 
@@ -76,17 +101,26 @@ inn på en ekstisterende konto -->
             <h4>Log in here:</h4>
             Email: 
                         <br/>
-                        <input type="text" id="Email" value="" placeholder="Email address"/></input> 
+                        <input 
+                        type="text"
+                        id="logInEmail" 
+                        placeholder="Email address"> 
                         <br/>
                         <br/>
             Password: 
                         <br/>
-                        <input type="password" id="password" value="" placeholder="Your password"/>
+                        <input 
+                        type="password" 
+                        id="logInPassword" 
+                        placeholder="Your password">
                         <br/>
                         <br/>
-            <p id="passworderror" style="color: red; margin-top:  1px; margin-bottom: 1px;"></p>
+            <p 
+            class= error
+            id="loginError" ></p>
             
-            <button onclick='logInButton()'>Log in</button>
+            <button 
+            onclick="logInButton()">Log in</button>
         </div>
       
       
@@ -98,7 +132,7 @@ inn på en ekstisterende konto -->
       </footer>
 
     <script src="../javaScript/script.js" ></script>
-    <script src="../javaScript/storage.js" ></script>
+   
     
     </body>
 

@@ -9,16 +9,12 @@
 </head>
 <body>
 
- 
-
   </div>
     <header class="header">
         <nav class="nav">
           
             <ul class="nav__links">
-              
                 <img class = "logo" src = ../photos/photo.png>
-                
                 <li class="nav__item">
                   <a class="nav__link" href="explore.html">Explore</a>
                 </li>
@@ -40,7 +36,6 @@
       </header>
   
         <div class="titles">
-         
           <h2>
            My profile
           </h2>
@@ -48,56 +43,65 @@
 
        <div class ="profileOverview" >
          <h2> My profile photo:</h2>
-
         <img class = "profilePhoto" src = ../photos/victoria.png>
        </div>
-
-       
-       
 
         <div class="updateForm">
           <h2>Edit your user info:</h2>
           
           Full Name:
                       <br/>
-                      <input type="text" id="user_name" value="" placeholder="Your name"/>
+                      <input type="text" id="updateFullName" placeholder="Your name"/>
                       <br/>
-                      <br/>
-          <p id="validationTextName" style="color: red; margin-top:  1px; margin-bottom: 1px;"></p>
+          <p 
+          class="error"
+          id="validationTextName" ></p>
+
            Email: 
                       <br/>
-                      <input type="text" id="email" value="" placeholder="Email"/>
+                      <input type="text" id="updateEmail" placeholder="Email"/>
                       <br/>
-                      <br/>
-          <p id="validationTextEmail" style="color: red; margin-top:  1px; margin-bottom: 1px;"></p>
+          <p 
+          class="error"
+          id="validationTextEmail" ></p>
+
           Age:
                       <br>
-                      <input type="age" id= "age" value="" placeholder="Age"/>
+                      <input type="age" id= "updateAge"  placeholder="Age"/>
                       <br/>
+          <p 
+          class="error"
+          id="validationTextAge" ></p>
+
+          Password:
+                      <br>
+                      <input type="password" id= "updatePassword"  placeholder="Password"/>
                       <br/>
+          <p 
+          class="error"
+          id="passworderror" ></p>
           
-          <p id="passworderror" style="color: red; margin-top:  1px; margin-bottom: 1px;"></p>
-          About me: 
-                      <br/>
-                      <input type="text" id="About Me" value="" placeholder="Edit bio"/>
-                      <br/>
-                      <br/>
-          <button type="submit" onclick="validateContactInformation()" style="cursor: pointer;">Update</button>
+          <button 
+            type="submit" 
+            onclick="validateContactInformation()" 
+            style="cursor: pointer;">Update</button>
 
           <br/>
           <br/>
-          <br/>
-          <br/>
+
+          
           <div class = "deleteUser">
+            
             <label for= "delete">Do you want to delete your user?</label> 
             <br/>
-            <input id= "delete" type="reset" value="Delete">
-    
+            <button 
+            onclick="deleteUser()"
+            id = " deleteButton">Delete</button>
+
           </div>
         </div>
           
 
-       
 
         <div class= "interestsForm">
           <h2>My interests:</h2>
@@ -107,23 +111,27 @@
           <select type="text" class="animals">
             <option selected disabled>-Animals-</option>
             <option value="animal1">Cat</option>
-            <option value="animal2">Dog</option>
+            <option value="animal2">Dog</option> </select>
+            
           <br/>
            <br/>
-          Do you have any hobbies?: 
+
+           Would you rather?: 
           <br/>
-          <select type="text" class="hobbies">
-            <option selected disabled>-Hobbies-</option>
-            <option value="hobbie1">Sports</option>
-            <option value="hobbie2">Programming</option>
+          <select type="text" class="animals">
+            <option selected disabled>-Options-</option>
+            <option value="animal1">Watch netflix</option>
+            <option value="animal2">Learn programming</option>
+          </select>
           <br/>
-          <br/>
+           <br/>
           What´s your favourite meal?: 
           <br/>
           <select type="text" class="meals">
             <option selected disabled>-Meals-</option>
             <option value="meal1">Taco</option>
             <option value="meal2">Pizza</option>
+          </select>
           <br/>
           <br/>
           Where would you want to go on vacation?: 
@@ -132,6 +140,7 @@
             <option selected disabled>-Destinations-</option>
             <option value="destination1">Maldives</option>
             <option value="destination2">Tokyo</option>
+          </select>
           <br/>
            
           

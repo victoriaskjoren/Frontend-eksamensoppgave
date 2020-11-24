@@ -71,7 +71,7 @@ function signInButton() {
   localStorage.setItem("password", signUpPassword);
   localStorage.setItem("age", age);
 
-  const jwt = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJib2R5Ijoic3R1ZmYiLCJpYXQiOjE2MDUzMDI4OTZ9.m-fXhmPl65e-VrR9---1GLpuvO3goxPZUOvQTUUWdG0";
+  const jwt = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJib2R5Ijoic3R1ZmYiLCJpYXQiOjE2MDU1Mzk1ODJ9.KZ_cq16jTc8cf4QpxVt_03QcSxRKLpCOqEPB7snhfkQ";
   console.log("test")
   fetch("http://localhost:3001/users", {
     method: "POST",

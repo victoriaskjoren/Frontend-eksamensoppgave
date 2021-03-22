@@ -1,9 +1,9 @@
 document
   .getElementById("signUpPassword")
-  .addEventListener("keyup", 
+  .addEventListener("keyup",
   function () {
     let password = document.getElementById("signUpPassword").value;
-    if (password.length <= 8) {
+    if (password.length < 8) {
       document.getElementById("passworderror").innerHTML =
         "Password must contain more than 8 letters";
     } else {
@@ -107,7 +107,7 @@ function logInButton() {
   const logInPassword = document.getElementById("logInPassword").value;
 
   if (savedEmail == logInEmail && savedPassword == logInPassword) {
-      
+
     window.location.href = "../html/explore.html";
   } else {
     document.getElementById("logInError").innerHTML = "Invalid <br/>";
@@ -117,8 +117,8 @@ function logInButton() {
 
 function deleteUser(){
 
-  
-    
+
+
         localStorage.removeItem("fullName")
         localStorage.removeItem("email")
         localStorage.removeItem("age")
@@ -127,5 +127,5 @@ function deleteUser(){
         window.location.href = "../html/index.html";
 
 
-    
+
 }
